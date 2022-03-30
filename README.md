@@ -1,1 +1,1 @@
-# javaee_crud
+# javaee_crud with jsp, jstl, jdbc 
