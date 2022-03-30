@@ -45,9 +45,9 @@
 							<td>${e.nom}</td>
 							<td>${e.prenom}</td>
 							<td>${e.telephone}</td>
-							<td>${e.adresse.ville}</td>
-							<td><a onclick="return confirm('Etes-vous sûr ?')" href="SupprimerAdresseServlet?id=${a.id}">Supprimer</a></td>
-							<td><a href="EditerAdresseServlet?id=${a.id}">Editer</a></td>
+							<td>${e.adresse.id}</td>
+							<td><a href="EditerEtudiantServlet?id=${e.id}">Editer</a></td>
+							<td><a onclick="return confirm('Etes-vous sûr ?')" href="SupprimerAdresseServlet?id=${e.id}">Supprimer</a></td>
 						</tr>
 					</c:forEach>
 				</table>

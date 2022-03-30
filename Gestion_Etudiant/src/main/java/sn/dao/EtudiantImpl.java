@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import sn.model.Adresse;
 //import sn.model.Adresse;
 import sn.model.Etudiant;
 
@@ -98,6 +99,29 @@ public class EtudiantImpl implements IEtudiant {
 		}
 		
 		return liste;
+	}
+
+	@Override
+	public Etudiant getEtudiant(int id) {
+		String sql = "SELECT * FROM etudiant WHERE id = ?";
+		Etudiant etudiant = new Etudiant();
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				etudiant.setId(rs.getInt(1));
+				etudiant.setMatricule(rs.getString(2));
+				etudiant.setNom(rs.getString(3));
+				etudiant.setPrenom(rs.getString(4));
+				etudiant.setTelephone(rs.getInt(5));
+				etudiant.getAdresse().setId(rs.getInt(6));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return etudiant;
 	}
 
 }

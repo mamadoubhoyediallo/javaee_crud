@@ -45,8 +45,8 @@
 							<td>${a.ville}</td>
 							<td>${a.quartier}</td>
 							<td>${a.rue}</td>
-							<td><a onclick="return confirm('Etes-vous sûr ?')" href="SupprimerAdresseServlet?id=${a.id}">Supprimer</a></td>
 							<td><a href="EditerAdresseServlet?id=${a.id}">Editer</a></td>
+							<td><a onclick="return confirm('Etes-vous sûr ?')" href="SupprimerAdresseServlet?id=${a.id}">Supprimer</a></td>
 						</tr>
 					</c:forEach>
 					<c:forEach items="${liste}" var="a">
@@ -56,8 +56,8 @@
 							<td>${a.ville}</td>
 							<td>${a.quartier}</td>
 							<td>${a.rue}</td>
-							<td><a onclick="return confirm('Etes-vous sûr ?')" href="SupprimerAdresseServlet?id=${a.id}">Supprimer</a></td>
 							<td><a href="EditerAdresseServlet?id=${a.id}">Editer</a></td>
+							<td><a onclick="return confirm('Etes-vous sûr ?')" href="SupprimerAdresseServlet?id=${a.id}">Supprimer</a></td>
 						</tr>
 					</c:forEach>
 				</table>
